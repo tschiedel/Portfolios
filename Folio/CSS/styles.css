@@ -1,0 +1,1652 @@
+* {
+    margin: 0%;
+    padding: 0%;
+}
+
+/* Pacote de fontes */
+
+@font-face {
+    font-family: SF Pro Display;
+    src: url(/Fontes/sf-pro-display-cufonfonts/SFPRODISPLAYREGULAR.OTF);
+ }
+
+@font-face {
+    font-family: SF Pro Text;
+    src: url(/Fontes/sf-pro-display-cufonfonts/SF-Pro-Text-Black.otf);
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header */
+
+@media screen and (max-width: 375px) {
+    html, body {
+        overflow-x: hidden;
+    }
+
+    header {
+        display: flex;
+        background-color: #fff;
+        width: 375px;
+        height: 128px;
+        position: fixed;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .button {
+        display: none;
+    }
+
+    .nav {
+        display: none;
+    }
+
+    .link {
+        display: none;
+    }
+
+    .burger-btn {
+        width: 32px;
+        height: 12px;
+        margin-right: 5%;
+        border: none;
+        background-color: transparent;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .burger-icon{
+        width: 32px;
+        height: 12px;
+    }
+
+    header img {
+        margin-left: 5%;
+    }
+
+    .dropbtn {
+        background-color: transparent;
+        border: none;
+        width: 40px;
+        height: 40px;
+        margin-right: 5%;
+        border: none;
+        background-color: transparent;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      
+      .dropdown {
+        position: relative;
+        display: inline-block;
+      }
+      
+    .dropdown-content {
+        display: none;
+        position: relative;
+        background-color: #f9f9f9;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    }
+      
+    .dropdown-content a {
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        font-size: 20px;
+        color: #8B8B8B;
+        font-family:  "SF Pro Display";
+     }
+      
+    .dropdown-content a:hover {
+        background-color: #f1f1f1
+    }
+      
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+}
+
+.button,
+.about-btn {
+    width: 180px;
+    height: 64px;
+    border-radius: 5px;
+    border: none;
+    margin-right: 5%;
+}
+
+.button {
+    background-color: #232340;
+}
+
+.text-button {
+    font-family: "SF Pro Display";
+    font-size: 18px;
+    color: #fff;
+    font-weight: bold;
+}
+
+header img, 
+footer img {
+    width: 159px;
+    height: 40px;
+}
+
+header img {
+    margin-left: 5%;
+}
+
+@media screen and (min-width: 376px) {
+    header {
+        display: flex;
+        background-color: #fff;
+        width: 100%;
+        height: 150px;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .nav, 
+    .link {
+        display: inline;
+        text-decoration: none;
+    }
+
+    .link:hover {
+        color: #5468E7;
+        font-weight: bold;
+    }
+
+    .nav{
+        width: 400px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .link{
+        /* topo | direita | inferior | esquerda */
+        margin-left: 2%;
+        margin-right: 2%;
+        font-size: 20px;
+        color: #8B8B8B;
+        font-family:  "SF Pro Display";
+    }
+
+    .burger-btn,
+    .dropdown-content,
+    .dropdown {
+        display: none;
+    }
+
+    .burger-icon{
+        display: none;
+    }
+}
+
+/* About - Sobre */
+
+@media screen and (max-width: 375px) { /*Mobile*/
+    .about-section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        width: 100%;
+    } 
+
+    .about {
+        display: flex;
+        flex-direction: column;
+        max-width: 311px;
+        max-height: 450px;
+        justify-content: flex-start;
+    }
+
+    .about-title {
+        font-size: 48px;
+        margin-top: 128px;
+        line-height: 56px;
+    }
+
+    .about-btn {
+        width: 160px;
+        height: 56px;
+        border-radius: 5px;
+        border: none;
+        margin-right: 0;
+        background-color: #5468E7;
+    }
+
+    .about-img {
+        position: relative;
+        width: 350px;
+        height: 363px;
+        left: 50px;
+        margin-bottom: 15%;
+    }
+
+    .about-title,
+    .about-paragraph {
+        margin-bottom: 5%;
+    }
+
+    .about-paragraph {
+        font-family: "SF Pro Display";
+        color: #606060;
+        font-size: 16px;
+        line-height: 28px;
+    }
+}
+
+@media screen and (min-width: 376px) { /*Desktop*/
+    .about-section {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        width: 100%;
+        
+    } 
+
+    .about {
+        display: flex;
+        flex-direction: column;
+        max-width: 436px;
+        max-height: 548px;
+        justify-content: flex-start;
+    }
+
+    .about-title {
+        font-size: 84px;
+    }
+
+    .about-title,
+    .about-paragraph {
+        margin-bottom: 30px;
+    }
+
+    .about-paragraph {
+        font-family: "SF Pro Display";
+        color: #606060;
+        font-size: 18px;
+        line-height: 32px;
+    }
+}
+
+.about-btn {
+    background-color: #5468E7;
+}
+
+.about-title {
+    font-family: "SF Pro Display";
+    font-weight: bold;
+    color: #232340;
+}
+
+
+
+/* Work */
+
+@media screen and (max-width: 375px){ /*Mobile*/
+
+    .icon {
+        width: 24px;
+        height: 24px;
+        display: none;
+    }
+
+    .group {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        justify-content: space-between;
+        width: 310px;
+        height: 314px;
+    }
+
+    .number,
+    .description {
+        font-size: 14px;
+        font-family: "SF Pro Display";
+    }
+
+    .work-title,
+    .services-title {
+        font-family: "SF Pro Display";
+        font-size: 40px;
+        line-height: 48px;
+        font-weight: bold;
+        margin-top: 15px;
+        max-width: 226px;
+        max-height: 192px;
+    }
+
+    .years-dropdown {
+        width: 144px;
+        height: 48px;
+        border: none;
+        background-color: #232340;
+        color: #fff;
+        font-size: 16px;
+        font-family: "SF Pro Display";
+        padding: 16px 20px;
+        outline: none;
+    }
+
+    .form-dropdown {
+        width: 144px;
+        height: 48px;
+    }
+
+    select option {
+        outline: none;
+    }
+
+    .years-selection {
+        width: 100%;
+        display: flex;
+        margin-top: 3%;
+        margin-bottom: 3%;
+    }
+
+    .selectors {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .desktop {
+        max-width: 375px;
+        max-height: 359px;
+        object-fit: contain;
+        object-position: bottom;
+    }
+
+    .years {
+        display: none;
+    }
+
+    .text {
+        font-size: 24px;
+        line-height: 32px;
+    }
+
+    .work-paragraph {
+        font-size: 16px;
+        line-height: 28px;
+    }
+
+    .work-end {
+        width: 311px;
+        height: 700px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        margin-top: 10%;
+        margin-bottom: 3%;
+    }
+
+    .work-aux {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .date-format {
+        font-size: 140px;
+        line-height: 167px;
+    }
+    
+    .date-legend {
+        font-size: 18px;
+        line-height: 24px;
+    }
+
+    .date-div {
+        display: flex;
+        justify-content: center;
+        width: 310px;
+        height: 310px;
+        border-radius: 50%;
+        box-shadow: 5px 10px 10px rgb(32, 31, 31);
+    }
+
+}
+
+@media screen and (min-width: 376px){ /*Desktop*/
+    .icon {
+        width: 24px;
+        height: 24px;
+    }
+
+    .group {
+        width: 100%;
+        display: flex;
+        justify-items: flex-start;
+        align-content: center;
+        justify-content: space-evenly;
+    }
+
+    .number,
+    .description {
+        font-size: 24px;
+        font-family: "SF Pro Display";
+    }
+
+    .work-title,
+    .services-title {
+        font-family: "SF Pro Display";
+        font-size: 64px;
+        font-weight: bold;
+        margin-top: 15px;
+        max-width: 668px;
+    }
+
+    select {
+        display: none;
+    }
+
+    .selectors {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .years-selection {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-evenly;
+        margin-top: 3%;
+        margin-bottom: 3%;
+    }
+    
+    .years {
+        display: flex;
+        flex-direction: column;
+        list-style-type: none;
+        height: 528px;
+        justify-content: space-evenly;
+    }
+    
+    .years-format {
+        font-family: "SF Pro Display";
+        color: #8B8B8B;
+        font-size: 24px;
+    }
+    
+    .years-format:hover {
+        font-weight: bold;
+        color: #fff;
+    }
+
+    .desktop {
+        max-width: 970px;
+        max-height: 598px;
+        object-fit: cover;
+        object-position: bottom;
+    }
+
+    .text {
+        font-size: 32px;
+    }
+
+    .work-paragraph {
+        font-size: 18px;
+        line-height: 32px;
+    }
+
+    .work-end {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 10%;
+        margin-bottom: 3%;
+    }
+
+    .date-format {
+        font-size: 200px;
+    }
+    
+    .date-legend {
+        font-size: 24px;
+    }
+
+    .date-div {
+        max-width: 402px;
+        max-height: 402px;
+    }
+
+}
+
+.number {
+    color: #8B8B8B;
+}
+
+.description {
+    color: #fff;
+    font-weight: bold;
+    margin-left: 15px;
+}
+
+.work-section {
+    display: flex;
+    flex-direction: column;
+    background-color: #232340;
+    width: 100%;
+    height: 1400px;
+}
+
+.work-title {
+    color: #fff;
+}
+
+.top-work,
+.top {
+    display: flex;
+    justify-content: space-around;
+    height: 414px;
+    align-items: center;
+}
+
+.arrow-left,
+.arrow-right {
+    width: 64px;
+    height: 64px;
+    border: none;
+    border-radius: 50%;
+    background-color: transparent;
+    padding: 10px;
+}
+
+.arrow-left:hover,
+.arrow-right:hover {
+    background-color: #5468E7;
+}
+
+.top-format {
+    display: flex;
+    flex-direction: column;
+    max-width: 668px;
+}
+
+.format {
+    display: flex;
+    flex-direction: row;
+}
+
+.group-work {
+    max-width: 468px;
+}
+
+.text {
+    color: #fff;
+    font-family: "SF Pro Display";
+    margin-bottom: 30px;
+}
+
+.work-paragraph {
+    color: #8B8B8B;
+    font-family: "SF Pro Display";
+    margin-bottom: 30px;
+}
+
+.date-div{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.date-format,
+.date-legend {
+    font-family: "SF Pro Display";
+    color: #fff;
+    font-weight: bold;
+}
+
+/* Services - Serviços*/
+
+@media screen and (max-width: 375px) { /* Mobile */
+    .number-02,
+    .description-02 {
+        font-size: 14px;
+        line-height: 18px;
+        font-family: "SF Pro Display";
+        color: #5468E7;
+    }
+
+    .description-02 {
+        font-weight: bold;
+        font-size: 14px;
+        line-height: 18px;
+        margin-left: 15px;
+    }
+
+    .img-options {
+        width: 91px;
+        height: 91px;
+    }
+
+    .menu {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        width: 311px;
+        height: 856px;
+    }
+
+    .btn-services {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        width: 311px;
+        height: 190px;
+        border: none;
+        border-radius: 25px;
+        font-family: "SF Pro Display";
+        font-size: 18px;
+        color: #5468E7;
+        font-weight: bold;
+        background-color: #fff;
+        box-shadow: 0px 10px 10px #EDEDED;
+    }
+
+    .btn-services:hover {
+        transition-duration: 0.5s;
+        background-color: #5468E7;
+        color: #fff;
+    }
+
+    .content-services {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        height: 856px;
+        margin-bottom: 5%;
+    }
+
+    .services-section {
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        width: 100%;
+        height: 1382px;
+        background-image: linear-gradient(to bottom, #ebe8e8, #fff);
+    }
+}
+
+@media screen and (min-width: 376px) { /* Desktop */
+    .number-02,
+    .description-02 {
+        font-size: 24px;
+        font-family: "SF Pro Display";
+        color: #5468E7;
+    }
+
+    .description-02 {
+        font-weight: bold;
+        margin-left: 20px;
+    }
+
+    .img-options {
+        width: 128px;
+        height: 128px;
+        margin-bottom: 30px;
+    }
+
+    .menu {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .btn-services {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 293px;
+        height: 480px;
+        border: none;
+        font-family: "SF Pro Display";
+        font-size: 24px;
+        color: #5468E7;
+        font-weight: bold;
+        background-color: #fff;
+    }
+
+    .btn-left {
+        border-top-left-radius: 30px;
+        border-bottom-left-radius: 30px;
+    }
+    
+    .btn-right {
+        border-top-right-radius: 30px;
+        border-bottom-right-radius: 30px;
+    }
+
+    .btn-services:hover {
+        width: 293px;
+        height: 560px;
+        transition-duration: 0.5s;
+        background-color: #5468E7;
+        border-radius: 30px;
+        color: #fff;
+    }
+
+    .content-services {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        height: 584px;
+        margin-bottom: 5%;
+    }
+
+    .services-section {
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        width: 100%;
+        background-image: linear-gradient(to bottom, #ebe8e8, #fff);
+    }
+}
+
+.services-title {
+    color: #232340;
+}
+
+/* Products - Produtos*/
+
+@media screen and (max-width: 375px) {
+    .products {
+        align-items: center;
+        height: 3384px;
+    }
+
+    .aux-btn-top {
+        display: none;
+    }
+
+    .list-products {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+    
+    .products-organizer-left {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        width: 311px;
+    }
+    
+    .products-organizer-right {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        width: 311px;
+    }
+
+    .view {
+        display: none;
+    }
+
+    .img-card {
+        width: 311px;
+        height: 355px;
+        margin-top: 20px;
+    }
+    
+    .img-card-bentov2 {
+        display: none;
+    }
+    
+    .img-card-sapiens {
+        width: 311px;
+        height: 355px;
+        margin-top: 20px;
+    }
+
+    .arrow-right-jobs-mobile {
+        width: 48px;
+        height: 48px;
+        border: none;
+        border-radius: 50%;
+        border: solid 2px #232340;
+        background-color: #fff;
+        color: #232340;
+        font-size: 25px;
+    }
+
+    .woman-work {
+        background-image: url("/Assets/Group153.png");
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-origin: border-box;
+        background-position: right;
+        width: 311px;
+        height: 355px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+    }
+
+    .featured-product {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 118px;
+        height: 28px;
+        border: none;
+        border-radius: 25px;
+        background-color: #908CFF;
+        color: #fff;
+        font-family: "SF Pro Display";
+        font-size: 10px;
+        margin-left: 20px;
+        margin-bottom: 20px;
+    }
+
+    .woman-work-left {
+        display: flex;
+        align-items: flex-end;
+        justify-content: flex-start;
+    }
+
+    .p-prod {
+        display: none;
+    }
+
+    .sapiens {
+        display: none;
+    }
+
+    .arrow-right-jobs {
+        display: none;
+    }
+
+    .p-prod-mobile {
+        max-width: 311px;
+        line-height: 28px;
+        margin-top: 3%;
+    }
+
+    .title-product {
+        font-size: 24px;
+        line-height: 32px;
+        margin-top: 20px;
+    }
+
+    .aux-btn-bottom {
+        width: 311px;
+        height: 46px;
+        border-radius: 5px;
+        border: none;
+        margin-top: 30px;
+        background-color: #5468E7;
+    }
+
+    .p-aux {
+        max-width: 311px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    .woman-work-right {
+        display: flex;
+        width: 311px;
+        justify-content: flex-start;
+    }
+
+}
+
+@media screen and (min-width: 376px) {
+    .aux-btn-bottom {
+        display: none;
+    }
+
+    .bento-aux {
+        display: none;
+    }
+
+    .list-products {
+        display: flex;
+        justify-content: space-evenly;
+        height: 1000px;
+        width: 100%;
+    }
+    
+    .products-organizer-left {
+        display: flex;
+        justify-content: flex-end;
+        flex-direction: column;
+        height: 100%;
+        width: 40%;
+    }
+    
+    .products-organizer-right {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        height: 100%;
+        width: 30%;
+    }
+
+    .view {
+        width: 72px;
+        height: 72px;
+        border: none;
+        border-radius: 50%;
+        background-color: #232340;
+        font-family: "SF Pro Display";
+        font-size: 24px;
+        color: #fff;
+    }
+
+    .img-card {
+        width: 450px;
+        height: 480px;
+        margin-top: 30px;
+    }
+    
+    .img-card-bentov2 {
+        width: 470px;
+        height: 380px;
+        margin-top: 30px;
+    }
+    
+    .img-card-sapiens {
+        width: 366px;
+        height: 506px;
+        margin-top: 30px;
+    }
+
+    .woman-work {
+        background-image: url("/Assets/img.png");
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-origin: border-box;
+        background-position: right;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+    
+    .woman-work-left {
+        display: flex;
+        flex-direction: column;
+        width: 80%;
+        padding-left: 12%;
+        margin-top: 20%;
+    }
+    
+    .woman-work-right {
+        display: flex;
+        justify-content: flex-start;
+        width: 30%;
+        margin-top: 10%;
+    }
+
+    .arrow-right-jobs {
+        width: 64px;
+        height: 64px;
+        border: none;
+        border-radius: 50%;
+        background-color: #5468E7;
+        color: #fff;
+        font-size: 32px;
+    }
+    
+    .arrow-right-jobs:hover {
+        background-color: #232340;
+    }
+
+    .featured-product {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 166px;
+        height: 40px;
+        border: none;
+        border-radius: 25px;
+        background-color: #908CFF;
+        color: #fff;
+        font-family: "SF Pro Display";
+        font-size: 18px;
+        margin-top: 3%;
+    }
+
+    .woman-work-left-mobile,
+    .woman-work-right-mobile {
+        display: none;
+    }
+
+    .sapiens {
+        color: #000000;
+        font-size: 40px;
+        max-width: 467px;
+        font-family: "SF Pro Display";
+        font-weight: bold;
+        margin-top: 3%;
+    }
+
+    .title-product {
+        line-height: 48px;
+        font-size: 40px;
+    }
+
+    .p-aux {
+        max-width: 366px;
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+
+    .arrow-right-jobs-mobile {
+        display: none; 
+    }
+}
+
+.title-product {
+    font-weight: bold;
+    font-family: "SF Pro Display";
+    color: #232340;
+}
+
+.products {
+    display: flex;
+    flex-direction: column;
+}
+
+.top-products{
+    display: flex;
+    justify-content: space-around;
+    height: 250px;
+    align-items: center;
+}
+
+.p-prod {
+    max-width: 205px;
+    line-height: 32px;
+    margin-top: 3%;
+}
+
+.div-view {
+    display: flex;
+    justify-content: flex-end;
+    max-width: 35%;
+    margin-top: 5%;
+    margin-bottom: 10%;
+}
+
+/* Jobs - Trabalhos*/
+
+@media screen and (max-width: 375px) { /*Mobile*/
+    .top-jobs {
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        min-height: 414px;
+    }
+
+    .button-jobs {
+        width: 311px;
+        height: 175px;
+        font-size: 24px;
+    }
+
+    .jobs-legend {
+        color: #606060;
+        font-size: 16px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    .jobs-btn-group,
+    .footer-paragraph {
+        display: none;
+    }
+
+    .section-jobs {
+        width: 100%;
+        height: 1100px;
+        background-image: linear-gradient(to bottom, #ebe8e8, #fff);
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    .jobs-paragraph,
+    .footer-paragraph-mobile {
+        font-family: "SF Pro Display";
+        color: #606060;
+        font-size: 16px;
+        line-height: 28px;
+        margin-top: 20px;
+        margin-bottom: 10px;
+    }
+
+    .jobs-paragraph {
+        max-width: 311px;
+    }
+
+    .group-jobs {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+    
+}
+
+@media screen and (min-width: 376px) { /*Desktop*/
+    .top-jobs {
+        display: flex;
+        width: 100%;
+        justify-content: space-around;
+        align-items: center;
+        min-height: 414px;
+    }
+
+    .button-jobs {
+        width: 568px;
+        height: 247px;
+        font-size: 32px;
+    }
+
+    .jobs-legend {
+        color: #606060;
+        font-size: 18px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    .jobs-btn-group {
+        display: flex;
+        align-items: center;
+        height: 53px;
+    }
+
+    .section-jobs {
+        width: 100%;
+        height: 1328px;
+        background-image: linear-gradient(to bottom, #ebe8e8, #fff);
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .jobs-paragraph,
+    .footer-paragraph {
+        font-family: "SF Pro Display";
+        color: #606060;
+        font-size: 18px;
+        line-height: 32px;
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+
+    .jobs-paragraph {
+        max-width: 367px;
+    }
+
+    .group-jobs {
+        width: 100%;
+        display: flex;
+        justify-items: flex-start;
+        align-content: center;
+        justify-content: space-evenly;
+    }
+    
+}
+
+.button-jobs {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    border-radius: 20px;
+    border: none;
+    background-color: #fff;
+    font-family: "SF Pro Display";
+    color: #232340;
+    padding-left: 8%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    box-shadow: 0px 10px 10px #EDEDED;
+}
+
+.jobs-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
+    background-color: #C897E4;
+}
+
+.jobs-btn:hover {
+    width: 52px;
+    height: 52px;
+}
+
+.jobs-btn-description {
+    font-family: "SF Pro Display";
+    color: #8B8B8B;
+    font-size: 18px;
+    margin-left: 20px;
+    font-weight: bold;
+}
+
+.btn-aux {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 53px;
+    height: 53px;
+}
+
+.button-jobs:hover {
+    background-color: #232340;
+    color: #fff;
+}
+
+.top-format-jobs{
+    display: flex;
+    flex-direction: column;
+    max-width: 668px;
+}
+
+/* Contact - Contato*/
+
+@media screen and (max-width: 375px) {
+
+    .div-contact {
+        justify-content: space-around;
+        width: 311px;
+        height: 548px;
+    }
+
+    .contact-bottom {
+        width: 100%;
+        height: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact-message {
+        font-size: 18px;
+        line-height: 24px;
+        max-width: 236px;
+        text-align: center;
+    }
+
+    .text-contact {
+        font-size: 18px;
+        line-height: 24px;
+    }
+
+    .balloon-mobile {
+        width: 73px;
+        height: 73px;
+        margin-left: 40px;
+    }
+
+    .h1-message {
+        font-size: 32px;
+        line-height: 40px;
+        max-width: 240px;
+        text-align: center;
+    }
+
+    .hr-vertical,
+    .balloon,
+    .msg,
+    .contact-button {
+        display: none;
+    }
+
+    .contact-button-mobile {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: none;
+        color:#0737AE;
+        font-size: 16px;
+        font-family: "SF Pro Display";
+        background-color: #fff;
+        width: 263px;
+        height: 56px;
+        border-radius: 10px;
+    }
+
+    .right-contact {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+        height: 40%;
+    }
+
+    .left-contact {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 60%;
+    }
+
+    .say-hello {
+        font-size: 14px;
+        line-height: 18px;
+    }
+
+}
+
+@media screen and (min-width: 376px) {
+    .div-contact {
+        justify-content: space-around;
+        width: 100%;
+        height: 1024px;
+    }
+
+    .contact-bottom {
+        width: 100%;
+        height: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    .contact-message {
+        font-size: 32px;
+        line-height: 40px;
+        max-width: 468px;
+        text-align: center;
+    }
+
+    .text-contact {
+        font-size: 64px;
+        line-height: 70px;
+    }
+
+    .say-hello {
+        font-size: 18px;
+        line-height: 24px;
+    }
+
+    .h1-message {
+        font-size: 64px;
+        max-width: 367px;
+    }
+
+    .balloon-mobile,
+    .contact-button-mobile {
+        display: none;
+    }
+
+    .balloon {
+        width: 103px;
+        height: 103px;
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+
+    .right-contact {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        width: 50%;
+        height: 100%;
+    }
+
+    .left-contact {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 50%;
+        height: 100%;
+    }
+}
+
+.section-contact {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.div-contact {
+    display: flex;
+    flex-direction: column;
+    background-color: #5468E7;
+    margin: 5% 10%;
+    border-radius: 20px;
+}
+
+.contact-message,
+.msg {
+    font-family: "SF Pro Display";
+    color: #fff;
+}
+
+.text-contact {
+    font-family: "SF Pro Text";
+    color: #fff;
+}
+
+.msg {
+    max-width: 255px;
+    font-size: 32px;
+}
+
+.contact-top {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.format-left-contact {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* topo | direita | inferior | esquerda */
+    margin: 0 10%;
+}
+
+.contact-button {
+    width: 64px;
+    height: 64px;
+    border: solid 2px #fff;
+    color: #fff;
+    border-radius: 50%;
+    background-color: transparent;
+    font-size: 32px;
+}
+
+.hr-horizontal {
+    border: solid 1px #ffffffb0;
+    width: 100%;
+}
+
+.hr-vertical {
+    border: solid 1px #ffffffb0;
+    height: 100%;
+}
+
+/* Footer - Rodapé */
+
+@media screen and (max-width: 375px) { /*Mobile*/
+    footer {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        height: 415px;
+    }
+
+    .hr-horizontal-footer {
+        display: none;
+    }
+
+    .group-footer {
+        width: 311px;
+        height: 88px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .follow-us,
+    .copyright {
+        display: none;
+    }
+
+    .group-social {
+        width: 311px;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    .button-social {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        border: solid 2px #D8D8D8;
+        width: 40px;
+        height: 40px;
+        background-color: transparent;
+    }
+
+    .button-social:hover {
+        background-color: #5468E7;
+        border: solid 2px #5468E7;
+    }
+
+    .footer-paragraph-mobile {
+        max-width: 311px;
+        text-align: center;
+    }
+
+    .menu-footer {
+        display: flex;
+        flex-direction: column;
+        list-style-type: none;
+        height: 528px;
+        justify-content: space-evenly;
+    }
+
+    .form-footer {
+        width: 311px;
+        height: 48px;
+    }
+
+    .select-footer {
+        width: 311px;
+        height: 48px;
+        border-radius: 10px;
+        border: solid 1px #ADADAD;
+        color: #606060;
+        font-weight: bold;
+        background-color: transparent;
+        font-family: "SF Pro Display";
+        padding: 16px;
+        outline: none;
+    }
+
+}
+
+@media screen and (min-width: 376px) { /*Desktop*/
+    .hr-horizontal-footer {
+        border: solid 1px #D8D8D8;
+        width: 80%;
+        margin: 3% 5%;
+    }
+
+    .group-footer {
+        width: 80%;
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 3%;
+    }
+
+    .follow-us {
+        font-family: "SF Pro Text";
+        font-size: 14px;
+        color: #5468E7;
+    }
+
+    .group-social {
+        width: 233px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .copyright-mobile,
+    .footer-paragraph-mobile {
+        display: none;
+    }
+
+    .button-social {
+        border: none;
+        background-color: transparent;
+    }
+
+    .footer-paragraph {
+        max-width: 565px;
+        text-align: center;
+    }
+
+    .menu-footer {
+        display: none;
+    }
+
+}
+
+.footer-top {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.copyright,
+.copyright-mobile {
+    font-family: "SF Pro Text";
+    font-size: 14px;
+    color: #ADADAD;
+}
+
+.social {
+    width: 16px;
+    height: 16px;
+}
+
+.youtube {
+    width: 16px;
+    height: 12px;
+}
+
+
